@@ -133,4 +133,10 @@
       <Name>App_secundaria</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Portada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Login.png" />
+  </ItemGroup>
 </Project>

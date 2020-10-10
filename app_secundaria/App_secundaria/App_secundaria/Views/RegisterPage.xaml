@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="App_secundaria.Views.RegisterPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="5"
+            BackgroundColor="#8ca3cb">
+            <Image
+                Source="Login"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="180">
+            </Image>
+            <StackLayout>
+                <Entry
+                    FontSize="Large" 
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Email"
+                    Text="{Binding Email, Mode=TwoWay}"
+                    Placeholder="Email"
+                    VerticalOptions="Center">
+                </Entry>
+                <Entry
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="true"
+                    Text="{Binding Password, Mode=TwoWay}"
+                    Placeholder="Password"
+                    VerticalOptions="Center">
+                </Entry>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

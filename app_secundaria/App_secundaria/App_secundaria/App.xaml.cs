@@ -14,7 +14,7 @@
         {
             InitializeComponent();
 
-            this.MainPage = new LoginPage();
+            this.MainPage = new RegisterPage();
         }
         #endregion
 
