@@ -5,9 +5,10 @@
     x:Class="App_secundaria.Views.LoginPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     BackgroundColor="#f4f4f3"
-    Title="Register">
+    Title="Login">
     <ContentPage.Content>
         <StackLayout
+            BindingContext="{Binding Login}"
             Padding="5"
             VerticalOptions="FillAndExpand">
             <Label
@@ -30,16 +31,19 @@
                     HeightRequest="50"
                     HorizontalOptions="Fill"
                     Text="Create Account"
-                    TextColor="White">
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
                 </Button>
                 <Button
                     BorderRadius="20"
                     BackgroundColor="#e77a59"
+                    Command="{Binding SignInCommand}"
                     FontSize="Medium"
                     HeightRequest="50"
                     HorizontalOptions="FillAndExpand"
                     Text="Sign in"
-                    TextColor="White">
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
                 </Button>
             </StackLayout>
         </StackLayout>

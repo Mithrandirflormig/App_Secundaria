@@ -3,33 +3,85 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="App_secundaria.Views.RegisterPage"
-    BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="Register">
     <ContentPage.Content>
         <StackLayout
-            Padding="5"
-            BackgroundColor="#8ca3cb">
+            BindingContext="{Binding Register}"
+            BackgroundColor="#8ca3cb"
+             Padding="5">
             <Image
                 Source="Login"
                 VerticalOptions="CenterAndExpand"
                 WidthRequest="180">
             </Image>
-            <StackLayout>
+            <StackLayout
+                VerticalOptions="CenterAndExpand">
                 <Entry
                     FontSize="Large" 
                     HorizontalOptions="FillAndExpand"
                     Keyboard="Email"
                     Text="{Binding Email, Mode=TwoWay}"
+                    TextColor="White"
                     Placeholder="Email"
-                    VerticalOptions="Center">
+                    VerticalOptions="CenterAndExpand">
                 </Entry>
                 <Entry
                     FontSize="Large"
                     HorizontalOptions="FillAndExpand"
                     IsPassword="true"
                     Text="{Binding Password, Mode=TwoWay}"
+                    TextColor="White"
                     Placeholder="Password"
-                    VerticalOptions="Center">
+                    VerticalOptions="CenterAndExpand">
                 </Entry>
+                <StackLayout
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        HorizontalOptions="StartAndExpand"
+                        Text="Keep me login"
+                        TextColor="White"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch
+                        HorizontalOptions="End">
+                    </Switch>
+                </StackLayout>
+                <ActivityIndicator
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BorderRadius="20"
+                    BackgroundColor="#637baa"
+                    FontSize="Medium"
+                    HeightRequest="50"
+                    Text="Go!"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
+                </Button>
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Forgot your password?"
+                    TextColor="WhiteSmoke"
+                    VerticalOptions="CenterAndExpand">
+                </Label>
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="Center"
+                Orientation="Horizontal">
+                <Image
+                    Source="face"
+                    WidthRequest="70">
+                </Image>
+                <Image
+                    Source="twitter"
+                    WidthRequest="75">
+                </Image>
+                <Image
+                    Source="gmail"
+                    WidthRequest="75">
+                </Image>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -139,4 +139,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\Login.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\face.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gmail.png" />
+  </ItemGroup>
 </Project>
