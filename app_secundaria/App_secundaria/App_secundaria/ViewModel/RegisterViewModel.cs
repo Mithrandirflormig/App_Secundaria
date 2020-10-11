@@ -1,5 +1,6 @@
 ﻿namespace App_secundaria.ViewModel
 {
+    using App_secundaria.Views;
     using GalaSoft.MvvmLight.Command;
     using System.ComponentModel;
     using System.Windows.Input;
@@ -9,6 +10,7 @@
     {
 
         #region Attributes
+        private string email;
         private string password;
         private bool isRunning;
         private bool isEnabled;
@@ -16,9 +18,15 @@
 
         #region Properties
         public string Email 
-        { 
-            get; 
-            set; 
+        {
+            get
+            {
+                return this.email;
+            }
+            set
+            {
+                Setvalue(ref this.email, value);
+            }
         }
 
         public string Password 
@@ -112,11 +120,12 @@
             this.IsRunning = false;
             this.IsEnabled = true;
 
-            await Application.Current.MainPage.DisplayAlert(
-                    "Perfect",
-                    "Let´s go!",
-                    "Accept");
-            return;
+            this.Email = string.Empty;
+            this.Password = string.Empty;
+
+            MainViewModel.GetInstance().Master = new MasterViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
+
         }
         #endregion
 

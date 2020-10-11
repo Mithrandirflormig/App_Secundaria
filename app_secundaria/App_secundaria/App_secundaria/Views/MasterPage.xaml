@@ -3,7 +3,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:App_secundaria.Views"
-    x:Class="App_secundaria.Views.MasterPage">
+    x:Class="App_secundaria.Views.MasterPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="MasterDetailPage">
 
     <MasterDetailPage.Master>
         <pages:MenuPage/>
