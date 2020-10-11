@@ -45,17 +45,21 @@
                         VerticalOptions="Center">
                     </Label>
                     <Switch
+                        IsToggled="{Binding IsRemember, Mode=TwoWay}"
                         HorizontalOptions="End">
                     </Switch>
                 </StackLayout>
                 <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
                     VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <Button
                     BorderRadius="20"
                     BackgroundColor="#637baa"
+                    Command="{Binding GoCommand}"
                     FontSize="Medium"
                     HeightRequest="50"
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                     Text="Go!"
                     TextColor="White"
                     VerticalOptions="CenterAndExpand">
