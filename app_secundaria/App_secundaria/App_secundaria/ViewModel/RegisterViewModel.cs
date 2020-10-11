@@ -2,7 +2,6 @@
 {
     using App_secundaria.Views;
     using GalaSoft.MvvmLight.Command;
-    using System.ComponentModel;
     using System.Windows.Input;
     using Xamarin.Forms;
 
@@ -73,17 +72,18 @@
         #endregion
 
         #region Commands
-        public ICommand GoCommand 
-        { 
+        public ICommand GoCommand
+        {
             get
             {
                 return new RelayCommand(Go);
             }
         }
 
-
+        
         private async void Go()
         {
+   
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
@@ -124,7 +124,7 @@
             this.Password = string.Empty;
 
             MainViewModel.GetInstance().Master = new MasterViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new MasterPage());
+            Application.Current.MainPage = new MasterPage();
 
         }
         #endregion

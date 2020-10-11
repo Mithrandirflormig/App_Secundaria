@@ -1,7 +1,17 @@
 ﻿namespace App_secundaria.ViewModel
 {
+    using System;
+    using System.Collections.ObjectModel;
     public class MainViewModel
     {
+        #region Properties
+        public ObservableCollection<MenuItemViewModel> Menus 
+        { 
+            get; 
+            set; 
+        }
+        #endregion
+
         #region ViewModels
         public LoginViewModel Login { get; set; }
 
@@ -16,6 +26,35 @@
             instance = this;
             this.Login = new LoginViewModel();
             this.Register = new RegisterViewModel();
+            this.LoadMenu();
+        }
+        #endregion
+
+        #region Methods
+        private void LoadMenu()
+        {
+            this.Menus = new ObservableCollection<MenuItemViewModel>();
+
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_settings",
+                PageName = "Settings",
+                Title = "Settings"
+            });
+
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_assessment",
+                PageName = "Statics",
+                Title = "Statics"
+            });
+
+            this.Menus.Add(new MenuItemViewModel
+            {
+                Icon = "ic_exit_to_app",
+                PageName = "RegisterPage",
+                Title = "LogOut"
+            });
         }
         #endregion
 
